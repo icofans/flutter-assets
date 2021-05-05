@@ -4,6 +4,7 @@ class Node {
     this.ext = infos.ext;
     this.varients = infos.varients;
     this.tag = infos.tag;
+    this.packageName = packageName;
   }
 
   gen() {

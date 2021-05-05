@@ -7,7 +7,7 @@
         "assets",
         "vscode"
     ],
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "icofans",
     "engines": {
         "vscode": "^1.27.0"
