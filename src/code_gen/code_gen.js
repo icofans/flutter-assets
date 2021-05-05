@@ -1,9 +1,10 @@
 const UI = require("../ui/ui.js");
 
 class CodeGen {
-  constructor(codeFolder, infos) {
+  constructor(codeFolder, infos,packageName) {
     this.infos = infos;
     this.codeFolder = codeFolder;
+    this.packageName = packageName;
 
     /// create folder if needed
     const fs = require("fs");
@@ -23,7 +24,8 @@ class CodeGen {
       "assets_template",
       support.all(),
       "asset",
-      this.infos
+      this.infos,
+      this.packageName
     ).gen();
     this._syncToFile("assets.dart", assets, files);
     /// Assets_Image 节点
@@ -32,6 +34,7 @@ class CodeGen {
       support.images,
       "image",
       this.infos,
+      this.packageName,
       ["import 'package:flutter/widgets.dart';", `import 'assets.dart';`]
     ).gen();
     this._syncToFile("assets_images.dart", assetImages, files);

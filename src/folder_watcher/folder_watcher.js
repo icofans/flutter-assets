@@ -81,7 +81,7 @@ class FolderWacther {
 
     UI.step("regenerate dart code", 1);
     const CodeGen = require("../code_gen/code_gen.js");
-    new CodeGen(this.config.output_path, infos).gen();
+    new CodeGen(this.config.output_path, infos,this.config.packageName).gen();
 
     UI.step("regenerate pubspec.yaml assets", 1);
     const PubspecGen = require("../pubspec/pubspec_gen.js");

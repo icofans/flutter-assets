@@ -18,9 +18,6 @@ exports.activate = function(context) {
     const { trimEnd } = require("lodash/string");
     const FlutterAssets = require("./flutter_assets.js");
     new FlutterAssets(trimEnd(rootPath, "/")).start();
-
-   
-    
 };
 
 /**

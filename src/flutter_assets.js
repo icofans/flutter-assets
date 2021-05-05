@@ -45,6 +45,7 @@ const Constant = Object.freeze({
       const config = doc.flutter_assets;
       const assets = config.assets_path;
       const code = config.output_path || "lib/assets";
+      const packageName = config.package || "";
   
       if (!assets) {
         throw new Error(
@@ -56,7 +57,8 @@ const Constant = Object.freeze({
       return {
         assets_path: flatten([assets]).map(a => trimEnd(a, "/")),
         output_path: trimEnd(code, "/"),
-        pubspec: Constant.FLUTTER_PUBSPEC
+        pubspec: Constant.FLUTTER_PUBSPEC,
+        packageName: packageName
       };
     }
   }

@@ -8,10 +8,12 @@
 flutter_assets:
   assets_path: assets/images/
   output_path: lib/common/assets/
+  package: module_home
 ```
 
 - `assets_path` 代表项目中资源文件的目录，有多个的时候可以传入数组。
 - `output_path` 代表自动生成的代码的根目录。
+- `package` 指定模块，会生成模块相应的声明代码。
 
 2、在 VSCode -> Extensions 下搜索 `flutter_assets` 并安装, 重新打开项目
 
@@ -83,3 +85,5 @@ pubspec.yaml
     - assets/images/tab/
 ...
 ```
+
+3、设置了package时，会生成package声明的相关代码
