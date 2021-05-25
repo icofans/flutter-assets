@@ -49,7 +49,7 @@ class CodeTemplate {
     bool.fromEnvironment('${packageName}', defaultValue: false);
   
   /// AssetImage with package
-  static const String package = isRunModule ? null : '${packageName}';\n`;
+  static const String? package = isRunModule ? null : '${packageName}';\n`;
   }
 }
 
