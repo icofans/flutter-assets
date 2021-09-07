@@ -38,7 +38,7 @@ class ImageNode extends Node {
     return `
   /// Assets for ${this.identifier}
   /// ${this.varients.join(", ")}
-  static AssetImage get ${this.identifier} => const AssetImage(Assets.${
+  static AssetImage get ${this.identifier} => AssetImage(Assets.${
       this.identifier
     }${packageInfo});`;
   }

@@ -87,3 +87,5 @@ pubspec.yaml
 ```
 
 3、设置了package时，会生成package声明的相关代码
+
+4、新增左侧菜单, 需在模块根目录右键使用

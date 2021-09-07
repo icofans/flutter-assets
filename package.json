@@ -7,7 +7,7 @@
         "assets",
         "vscode"
     ],
-    "version": "1.0.6",
+    "version": "1.0.7",
     "publisher": "icofans",
     "engines": {
         "vscode": "^1.27.0"
@@ -19,10 +19,28 @@
     "activationEvents": [
         "*"
     ],
+    "contributes": {
+        "menus": {
+			"explorer/context": [
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "flutterassets.generateAssets",
+					"group": "flutterassets@1"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "flutterassets.generateAssets",
+				"title": "Generate Assets"
+			}
+		]
+	},
     "main": "./src/extension",
     "scripts": {
         "test": "node ./src/extension.js"
     },
+    
     "dependencies": {
         "chokidar": "^3.0.2",
         "imagemin": "^7.0.0",

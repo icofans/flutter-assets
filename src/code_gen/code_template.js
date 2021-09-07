@@ -45,11 +45,10 @@ class CodeTemplate {
     return `
   /// Assets for module define
   /// flutter run --dart-define=${packageName}=true
-  static const isRunModule =
-    bool.fromEnvironment('${packageName}', defaultValue: false);
+  static bool isRunModule = false;
   
   /// AssetImage with package
-  static const String? package = isRunModule ? null : '${packageName}';\n`;
+  static String? package = isRunModule ? null : '${packageName}';\n`;
   }
 }
 
